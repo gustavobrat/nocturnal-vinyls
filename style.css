@@ -1,0 +1,420 @@
+/* ==========================================================================
+   BASE ESTÉTICA: POP BRUTALISTA & NOCTURNAL ANIMALS (TOM FORD INSPIRATION)
+   ========================================================================== */
+
+:root {
+    --bg-main: #0a0909;          /* Preto profundo cinematográfico */
+    --bg-surface: #141212;       /* Preto de superfície para blocos */
+    --text-light: #f5f5f7;       /* Branco off-white para legibilidade */
+    --accent-crimson: #800f14;   /* Vermelho carmesim escuro (Tom Ford Noir) */
+    --accent-neon: #ff002b;      /* Vermelho vibrante para contrastes pop */
+    --border-brutal: 4px solid #000000;
+    --shadow-brutal: 6px 6px 0px #000000;
+    --shadow-brutal-hover: 9px 9px 0px #000000;
+}
+
+/* Reset Geral e Tipografia Brutalista */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    letter-spacing: -0.5px;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    overflow-x: hidden;
+    padding-bottom: 80px;
+}
+
+/* ==========================================================================
+   HEADER & LOGO AREA
+   ========================================================================== */
+
+header {
+    background: var(--bg-surface);
+    border-bottom: var(--border-brutal);
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Espaço reservado para a logo que você vai criar */
+#logo-container {
+    background: var(--accent-crimson);
+    border: var(--border-brutal);
+    padding: 12px 28px;
+    box-shadow: var(--shadow-brutal);
+    min-width: 260px;
+    text-align: center;
+    transform: rotate(-1deg); /* Toque de assimetria brutalista */
+}
+
+#logo-container span {
+    color: #000000;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+}
+
+/* Botão de Carrinho Simulado */
+#btn-carrinho {
+    background: #ffffff;
+    color: #000000;
+    border: var(--border-brutal);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--shadow-brutal);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+#btn-carrinho:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-brutal-hover);
+    background: var(--accent-neon);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   HERO PROMO SECTOR: MADONNA - CONFESSIONS II
+   ========================================================================== */
+
+#promo-madonna {
+    margin: 50px 40px;
+    border: var(--border-brutal);
+    background-color: #1a1112;
+    /* ESPAÇO NO FUNDO PARA A IMAGEM DA MADONNA */
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.9) 45%, rgba(0,0,0,0.3) 100%), url('SUA_IMAGEM_MADONNA_AQUI.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    box-shadow: 12px 12px 0px var(--accent-crimson);
+    position: relative;
+}
+
+.promo-content {
+    max-width: 650px;
+    border: var(--border-brutal);
+    background: #000000;
+    padding: 45px;
+    box-shadow: var(--shadow-brutal);
+}
+
+.tag-status {
+    background: var(--accent-neon);
+    color: #ffffff;
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border: 2px solid #000000;
+}
+
+#promo-madonna h1 {
+    font-size: 4rem;
+    line-height: 0.95;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 4px 4px 0px var(--accent-crimson);
+}
+
+#promo-madonna p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: #bfbfbf;
+    letter-spacing: 0;
+}
+
+.btn-comprar-falso {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    padding: 22px;
+    border: var(--border-brutal);
+    box-shadow: var(--shadow-brutal);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-comprar-falso:hover {
+    background: var(--accent-neon);
+    color: #ffffff;
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-brutal-hover);
+}
+
+/* ==========================================================================
+   EXTENSIVE PRODUCTS GRID (CATALOG)
+   ========================================================================== */
+
+#catalogo-general {
+    padding: 40px;
+}
+
+#catalogo-general h2 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    border-left: 12px solid var(--accent-crimson);
+    padding-left: 20px;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 50px 40px; /* Espaço extenso entre as linhas e colunas */
+}
+
+/* Card de Vinil Pop Brutalista */
+.card-produto {
+    background: var(--bg-surface);
+    border: var(--border-brutal);
+    box-shadow: var(--shadow-brutal);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-produto:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-brutal-hover);
+}
+
+/* Espaço Integrado de Imagem Extensa */
+.espaco-imagem-vinil {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #1f1c1c;
+    border-bottom: var(--border-brutal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /* Para colocar a imagem de fundo via inline CSS futuramente */
+    background-size: cover;
+    background-position: center;
+}
+
+.espaco-imagem-vinil span {
+    color: #4a4444;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-family: monospace;
+    border: 2px dashed #332d2d;
+    padding: 20px;
+    width: 85%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Detalhes e Textos dos Álbuns */
+.produto-detalhes {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.produto-detalhes h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.album-titulo {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--accent-neon);
+    margin-bottom: 25px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Container de Preço e Ação Falsa */
+.compra-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Força o alinhamento na base do card */
+}
+
+.preco {
+    font-size: 1.5rem;
+    background: #000000;
+    padding: 6px 14px;
+    border: 2px solid #262121;
+}
+
+.btn-add-falso {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #000000;
+}
+
+.btn-add-falso:hover {
+    background: var(--accent-crimson);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   SIDEBAR DRAWERS: FAKE SHOPPING BAG
+   ========================================================================== */
+
+#carrinho-lateral-falso {
+    position: fixed;
+    right: -460px; /* Escondido por padrão */
+    top: 0;
+    width: 440px;
+    height: 100%;
+    background: var(--bg-surface);
+    border-left: var(--border-brutal);
+    box-shadow: -12px 0px 0px #000000;
+    z-index: 200;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+/* Classe de ativação que o JavaScript usará para abrir */
+#carrinho-lateral-falso.active {
+    right: 0;
+}
+
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border-brutal);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.carrinho-header h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+#btn-fechar-carrinho {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#itens-carrinho-lista {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#itens-carrinho-lista p {
+    color: #595353;
+    text-align: center;
+    margin-top: 60px;
+    font-style: italic;
+    font-family: monospace;
+}
+
+.carrinho-footer {
+    border-top: var(--border-brutal);
+    padding-top: 25px;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+#btn-checkout-falso {
+    width: 100%;
+    background: var(--accent-crimson);
+    color: #ffffff;
+    padding: 18px;
+    text-align: center;
+    border: var(--border-brutal);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--shadow-brutal);
+}
+
+#btn-checkout-falso:hover {
+    background: var(--accent-neon);
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-brutal-hover);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE BRUTALISTA (MOBILE ADAPTATION)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #logo-container {
+        width: 100%;
+    }
+
+    #promo-madonna {
+        margin: 20px 15px;
+        padding: 25px;
+        min-height: auto;
+    }
+
+    #promo-madonna h1 {
+        font-size: 2.6rem;
+    }
+
+    #catalogo-general {
+        padding: 20px;
+    }
+
+    #catalogo-general h2 {
+        font-size: 2rem;
+    }
+
+    #carrinho-lateral-falso {
+      width: 100%;
+      right: -100%;
+      box-shadow: none;}}
